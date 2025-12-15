@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MySQL Course</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
 
+<script>
+  if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<header>
+  <h1>MySQL Database</h1>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<main style="padding:40px">
+  <h2>Lesson 1: Create Database</h2>
+  <pre>
+CREATE DATABASE school;
+  </pre>
+
+  <h2>Lesson 2: Create Table</h2>
+  <pre>
+CREATE TABLE students (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(50),
+  age INT
+);
+  </pre>
+
+  <h2>Lesson 3: Insert Data</h2>
+  <pre>
+INSERT INTO students (name, age)
+VALUES ('Juan', 20);
+  </pre>
+
+  <h2>Lesson 4: Select Data</h2>
+  <pre>
+SELECT * FROM students;
+  </pre>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
