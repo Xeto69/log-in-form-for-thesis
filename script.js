@@ -16,6 +16,28 @@ form.addEventListener("submit", function (e) {
     alert("Login Successful!");
     errorMsg.textContent = "";
   } else {
-    errorMsg.textContent = "Invalid credentials";
+    errorMsg.textContent = "Invalid username or password";
   }
 });
+
+function openForgot() {
+  document.getElementById("forgotModal").style.display = "flex";
+}
+
+function closeForgot() {
+  document.getElementById("forgotModal").style.display = "none";
+}
+
+function openSignup() {
+  document.getElementById("signupModal").style.display = "flex";
+}
+
+function closeSignup() {
+  document.getElementById("signupModal").style.display = "none";
+}
+
+window.onclick = function(e) {
+  if (e.target.classList.contains("modal")) {
+    e.target.style.display = "none";
+  }
+};
