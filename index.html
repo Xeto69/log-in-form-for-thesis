@@ -2,24 +2,45 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Login Form</title>
+  <title>Professional Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="login-container">
-    <h2>Welcome Back</h2>
-    <p>Please login to your account</p>
+<div class="container">
+  <div class="card">
 
-    <form id="loginForm">
-      <input type="text" id="username" placeholder="Username" required>
-      <input type="password" id="password" placeholder="Password" required>
+    <!-- LEFT SIDE (IMAGE) -->
+    <div class="image-box">
+      <img src="avatar.jpg" alt="Profile">
+      <div class="glow"></div>
+    </div>
 
-      <button type="submit">Login</button>
-      <p class="error" id="errorMsg"></p>
-    </form>
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="form-box">
+      <h2>Welcome Back</h2>
+      <p>Login to continue</p>
+
+      <form id="loginForm">
+        <div class="input-group">
+          <input type="text" id="username" required>
+          <label>Username</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" id="password" required>
+          <label>Password</label>
+          <span class="toggle" onclick="togglePassword()">👁</span>
+        </div>
+
+        <button type="submit">Login</button>
+        <p class="error" id="errorMsg"></p>
+      </form>
+    </div>
+
   </div>
+</div>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
