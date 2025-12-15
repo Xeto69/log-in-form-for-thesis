@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Course</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
 
+<script>
+  if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<header>
+  <h1>JavaScript Basics</h1>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<main style="padding:40px">
+  <h2>Lesson 1: Hello World</h2>
+  <pre>
+console.log("Hello, World!");
+  </pre>
+
+  <h2>Lesson 2: Variables</h2>
+  <pre>
+let age = 18;
+const name = "Bob";
+  </pre>
+
+  <h2>Lesson 3: Functions</h2>
+  <pre>
+function greet(user) {
+  return "Hello " + user;
+}
+  </pre>
+
+  <h2>Lesson 4: Button Click Example</h2>
+  <button onclick="alert('Button Clicked!')">Click Me</button>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
