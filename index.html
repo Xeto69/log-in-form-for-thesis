@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Professional Login</title>
+  <title>Advanced Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,16 +10,16 @@
 <div class="container">
   <div class="card">
 
-    <!-- LEFT SIDE (IMAGE) -->
+    <!-- IMAGE SECTION -->
     <div class="image-box">
-      <img src="logo.jpg.jpg" alt="Profile">
-      <div class="glow"></div>
+      <img src="logo.jpg.jpg" alt="Profile Image">
+      <div class="overlay"></div>
     </div>
 
-    <!-- RIGHT SIDE (FORM) -->
+    <!-- LOGIN FORM -->
     <div class="form-box">
       <h2>Welcome Back</h2>
-      <p>Login to continue</p>
+      <p>Login to your account</p>
 
       <form id="loginForm">
         <div class="input-group">
@@ -35,9 +35,36 @@
 
         <button type="submit">Login</button>
         <p class="error" id="errorMsg"></p>
+
+        <div class="links">
+          <a href="#" onclick="openForgot()">Forgot Password?</a>
+          <a href="#" onclick="openSignup()">Sign Up</a>
+        </div>
       </form>
     </div>
 
+  </div>
+</div>
+
+<!-- FORGOT PASSWORD MODAL -->
+<div class="modal" id="forgotModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeForgot()">×</span>
+    <h2>Reset Password</h2>
+    <input type="email" placeholder="Email">
+    <button>Send Reset Link</button>
+  </div>
+</div>
+
+<!-- SIGN UP MODAL -->
+<div class="modal" id="signupModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignup()">×</span>
+    <h2>Create Account</h2>
+    <input type="text" placeholder="Username">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Create Account</button>
   </div>
 </div>
 
