@@ -19,17 +19,16 @@ body {
 
 .card {
   display: flex;
-  background: rgba(15, 15, 15, 0.95);
+  background: #0f0f0f;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 50px rgba(255, 0, 0, 0.25);
+  box-shadow: 0 0 50px rgba(255,0,0,0.3);
 }
 
-/* LEFT IMAGE */
+/* IMAGE BOX */
 .image-box {
   width: 45%;
   position: relative;
-  background: #000;
 }
 
 .image-box img {
@@ -38,13 +37,13 @@ body {
   object-fit: cover;
 }
 
-.glow {
+.overlay {
   position: absolute;
   inset: 0;
-  box-shadow: inset 0 0 80px rgba(255, 0, 0, 0.6);
+  background: radial-gradient(circle, rgba(255,0,0,0.4), rgba(0,0,0,0.9));
 }
 
-/* RIGHT FORM */
+/* FORM */
 .form-box {
   width: 55%;
   padding: 60px;
@@ -57,10 +56,9 @@ body {
 
 .form-box p {
   color: #aaa;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
-/* INPUT */
 .input-group {
   position: relative;
   margin-bottom: 30px;
@@ -72,7 +70,7 @@ body {
   background: transparent;
   border: none;
   border-bottom: 2px solid #444;
-  color: white;
+  color: #fff;
   font-size: 16px;
 }
 
@@ -101,44 +99,68 @@ body {
   right: 10px;
   top: 12px;
   cursor: pointer;
-  color: #aaa;
 }
 
-/* BUTTON */
 button {
   width: 100%;
   padding: 14px;
-  border-radius: 30px;
   background: linear-gradient(135deg, #ff4d4d, #ff0000);
   border: none;
-  color: black;
-  font-size: 16px;
+  border-radius: 30px;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 button:hover {
   box-shadow: 0 0 20px #ff4d4d;
 }
 
-/* ERROR */
-.error {
+.links {
+  display: flex;
+  justify-content: space-between;
   margin-top: 15px;
+}
+
+.links a {
   color: #ff4d4d;
+  text-decoration: none;
   font-size: 14px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 800px) {
-  .card {
-    flex-direction: column;
-  }
-  .image-box {
-    height: 250px;
-    width: 100%;
-  }
-  .form-box {
-    width: 100%;
-  }
+.error {
+  color: #ff4d4d;
+  margin-top: 10px;
 }
+
+/* MODALS */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #0f0f0f;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(255,0,0,0.4);
+  animation: pop 0.3s ease;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  border-radius: 8px;
+}
+
+.close {
+  posit
