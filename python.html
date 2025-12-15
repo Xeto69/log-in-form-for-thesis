@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python Course</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<script>
+  if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<header>
+  <h1>Python Basics</h1>
+  <button onclick="logout()">Logout</button>
+</header>
+
+<main style="padding:40px">
+  <h2>Lesson 1: Hello World</h2>
+  <pre>
+print("Hello, World!")
+  </pre>
+
+  <h2>Lesson 2: Variables</h2>
+  <pre>
+x = 10
+name = "John"
+  </pre>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
